@@ -9,6 +9,11 @@ on:
         required: true
 
 jobs:
+  pipeline:
+    name: Pipeline
+    uses: GitHub-Accelerate/GH-Intermediate-Workflows/.github/workflows/vault.yml@main
+    secrets: inherit
+
   test:
     name: Testing
     runs-on: ubuntu-latest
