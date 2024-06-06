@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Test
-        run: |
-          echo "Hi everyone."
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17' # todo, get from calling workflow
+          distribution: 'temurin'
+      - name: Run the Maven verify phase
+        run: mvn --batch-mode --update-snapshots verify
