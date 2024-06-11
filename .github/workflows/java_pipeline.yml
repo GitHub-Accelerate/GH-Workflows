@@ -24,11 +24,6 @@ jobs:
     uses: GitHub-Accelerate/GH-Intermediate-Workflows/.github/workflows/vault.yml@main
     secrets: inherit
 
-  snapshot:
-    name: Snapshot
-    uses: GitHub-Accelerate/GH-Intermediate-Workflows/.github/workflows/snapshot.yml@main
-    secrets: inherit
-
   test:
     name: Testing
     runs-on: ubuntu-latest
