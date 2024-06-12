@@ -10,8 +10,8 @@ on:
 
 jobs:
   pipeline:
-    name: Pipeline
-    uses: GitHub-Accelerate/GH-Intermediate-Workflows/.github/workflows/vault.yml@main
+    name: CodeQL
+    uses: GitHub-Accelerate/GH-Intermediate-Workflows/.github/workflows/codeql.yml@main
     secrets: inherit
 
   sonarqube:
